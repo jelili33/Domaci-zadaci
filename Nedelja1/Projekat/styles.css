@@ -1,0 +1,105 @@
+section {height: 100vh;
+}
+nav ul li {display: inline; 
+    margin: 0px 0px 0px 5px;
+}
+nav ul li a:hover {text-decoration: none; 
+    color: violet !important;
+}
+nav ul li a:link {text-decoration: none;
+    color: black;
+}
+nav ul li a:visited {text-decoration: none;
+    color: black;
+}
+nav ul li a:active {text-decoration: none; 
+    color: rgba(54, 80, 95, 0.363);
+
+}
+
+header {position: fixed; 
+    background-color: white; 
+    display: block; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+section {
+    padding-top: 135px; box-sizing: border-box;
+}
+
+h1 { text-align: cent;
+
+    }
+
+   
+    form div input, form div textarea {
+        margin: 0px 0px 15px 0px;
+         width: 100%;
+         box-sizing: border-box;
+             }
+
+    .flex-container{ display: flex;
+        align-items: stretch;
+
+    }
+
+    .flex-grow-2 {flex-grow: 2; 
+
+    }
+    .flex-grow-1 {flex-grow: 1; 
+        align-self: center;
+
+}
+.flex-grow-3 {flex-grow: 3; 
+    align-self: center;
+
+}
+
+.text-underline {text-decoration: underline;}
+
+body {font-family: Georgia; 
+    margin: 0px 0px 0px 0px;
+}
+
+.wrap {
+    width: 100%;
+    background: #000 none repeat scroll 0% 0%;
+}
+
+.background-image1 { 
+    position: relative;
+     background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.background-image1::after {
+    content: ""; 
+    background-image: url("Slike/geometry1.jpg");
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
+
+.padding-10-rl {padding: 0px 10px 0px 10px;
+}
+
+.div-dimensions33 {width: 33.3%; 
+    float:left;
+    box-sizing: border-box;
+
+}
+
+.div-dimensions66 {width: 66.6%;
+    box-sizing: border-box;
+    float:right;
+
+}
