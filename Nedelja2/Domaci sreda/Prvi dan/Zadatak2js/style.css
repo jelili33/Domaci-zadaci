@@ -1,0 +1,32 @@
+li {display: inline; padding: 5px 5px 5px 5px;
+}
+.centre {text-align: center;
+}
+li{ border: solid black 7px; background-color: white; color: black;
+
+}
+a:hover {color: turquoise;
+}
+
+body { background-image:url("slike/background01.jpg"); 
+    opacity: 1;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+.white {background-color: white;
+}
+
+header, main {margin-bottom: 40px;
+}
+footer {bottom: 0px;  
+ }
+
+th, td {border: solid black 5px;
+}
+h1, h2 { background-color: #f0f0fb;
+
+}
+.labelwidth { width: 150px; display: inline-block; text-align: center;
+
+}
