@@ -6,6 +6,12 @@ for (var i=0; i<classOfButtonsForOrderCount.length;i++){
     classOfButtonsForOrderCount[i].addEventListener("click", addNumberOfPizzaToOrder);
 }
 
+classOfButtonsForOrderCount.forEach(uradiOvoZaSvakiELement);
+
+function uradiOvoZaSvakiELement(element){
+    element.addEventListener("click", addNumberOfPizzaToOrder);
+}
+
 function addNumberOfPizzaToOrder(){
     
     pizzaCounter=pizzaCounter+1;
