@@ -1,0 +1,89 @@
+1. Zašto koristimo JSON?
+
+JSON je tekstualni format koji je razumljiv različitim programskim jezicima zahvaljujući metodama koje imaju i 
+koji zato koristimo kao jedan od formata za prenos podataka. 
+Na primer, u javascript-u podaci koji su dobijeni od servera u JSON formatu 
+mogu biti prevedeni u js objekat korišćenjem  funkcije JSON.parse(), 
+dok za obrnuti proces kada treba prevesti podatke u JSON kako bi bili poslati na server može se koristiti JSON.stringify(). 
+Ovako se dobija ustaljena forma podataka koju različiti jezici mogu da obrade tj prevedu u neku od svojih struktura 
+i posle je tako koriste.
+
+2.Zašto su moduli korisni? +Primer
+
+Moduli su način pisanja programa tako da je svaki kod sastavljen iz više komponenti. 
+Svaka od komponenata predstavlja kraći deo koda (otprilike do 100 linija koda) i komponente su složene po logičkim celinama. 
+Ovakav način pisanja je prvenstveno pogodan jer će kod biti pregledan i lepo složen, a to je važno da bi osoba koja radi na projektu mogla
+lako da se snađe, odnosno ako je potrebno da nešto menja ili ako neki deo koda ne radi lakše je naći taj deo koda ako je sve uredno složeno. 
+Pored toga, različiti delovi koda mogu biti korišćeni u više nezavisnih projekata pa modularni način pisanja koda može poslužiti i kao neki 
+vid biblioteke iz koje se kodovi(kao vid šablona) uvoze po potrebi u druge projekte što skraćuje vreme rada na projektu.
+Modularni pristup zgodan je i ako više osoba radi na istom projektu i na ovaj način komponente koje rade različiti ljudi spajaju se u celinu bez
+konfuzije, budući da se može lagano pristupiti svakom delu koda u posebnoj komponenti.
+
+Na primer, ako imamo biblioteku morali bismo da imamo komponentu koja je član biblioteke, komponentu koja je knjiga i servise za učlanjenje,
+izdavanje i vraćanje knjige.
+
+3.Šta je ECMAScript?
+
+ECMAScript je standard za pisanje javaskripta nastao kao potreba za uniformnošću javaskripta 
+i propisuje ga "European Computers Manufacturers Assotiation". 
+Kada je javascript napravljen svaki web pretraživač je koristio posebnu verziju javaskripta 
+što je dovelo do toga da isti kod prikazan u dva različita pretrađživača izgleda drugačije. 
+Zbog toga je neophodno bilo napraviti standard koji će premostiti ove razlike 
+da bi veb strane i aplikacije izgledale isto u različitim pretraživačima.
+
+Prvi put ECMAScript primenjen je 1997, dve godine nakon što je nastao javaskript(prvobitno kao moka eng. mocha). 
+Iako je poslednja verzija iz 2017 ECMAScript 8, 
+najznačajnije promene donosi ECMAScript 6 koja uvodi npr. let, const, klase, erou funkcije (arrow =>).
+
+
+4.Opišite kako funkcionišu HTTP zahtevi i šta је to REST API.
+
+HTTP protokol je skup ustaljenih pravila preko kojih komuniciraju klijent i server. Klijent serveru šalje zahtev a server klijentu odgovara na isti.
+
+API je pristupna tačka na serveru preko koje dolazimo do podataka. REST API je api kome je predefinisan način pristupa radi lakšeg korišćenja.
+
+Server daje klijentu adrese gde može da pristupi i definiše tip zahteva koji klijent treba da mu uputi kako bi se desio određeni scenarijo. 
+Tako klijent šalje serveru zahteve različitog tipa među kojima su najčešći GET, POST, PUT i DELITE.
+Na primer, preko fetch funkcije, klijent upućuje zahtev koji je tipa GET ako treba preuzeti određene podatke sa servera i ovaj tip zahteva se upućuje automatski
+ako se ne označi eksplicitno tip zahteva u fetch funkciji. POST se koristi ako klijent želi pored preuzimanja podataka da šalje dodatne informacije
+ na server koje će se dodati ostalim već postojećim, a PUT služi za apdejtovanje podataka. DELETE se koristi za brisanje podataka.
+
+Tip zahteva koji se šalje serveru može često da se preklapa, odnosno imena koja imaju su više logička nego funkcionalna obeležja. 
+Na primer PUT ili POST mogu biti korišćeni na potpuno isti način i u ovom slučaju u zavisnosti od toga kako je server predefinisao pristupne tačke 
+klijent "bira" tip zahteva koji će koristiti. Jedino je GET tip koji samo preuzima podatke i zbog toga kada se upućuje ovaj zahtev frontend ne definiše 
+ npr koji format podataka će slati serveru (nema body).
+
+
+
+5.Koja je razlika između == i === ?
+
+Znak == poredi dve stavke po vrednosti, dok znak === poredi dve stavke po vrednosti i tipu.
+
+Tako na primer ako imamo 134 kao broj i 134 kao string, 
+ove dve stavke biće jednake po vrednosti ali će biti različitog tipa, 
+pa ako ih poredimo sa == biće jednake, ,međutim ako ih poredimo sa === neće biti.
+
+let a=134;
+let b="134";
+
+a==b, true
+a===b, false
+
+Međutim, ovo ne vazi za poredjenje stringa i buleana jer bulean i string neće biti jednaki ni po vrednosti 
+ni po tipu iako napisemo true ili false u stringu to nece biti jednako sa true false iz buleana:
+
+let boolean=true;
+let string="true";
+
+boolean==string, false
+boolean===string, false
+
+6. Šta vraća console.log(typeof typeof true); Objasniti zašto
+
+Ako posmatramo console.log(typeof typeof true) u konzoli dobijamo string. Prvo, sa typeof dobijamo kog je tipa neki element. 
+Ako ispitujemo typeof true, odnosno prikažemo ga u konzoli console.log(typeof true) dobićemo boolean.
+Budući da u primeru imamo typeof još jednom, sistem u drugom koraku ispituje typeof boolean i kako je boolean reč vidi ga kao string 
+(isto bi bilo kao console.log(typeof "boolean")).
+
+Isto bismo dobili i da napišemo na primer console.log (typeof typeof 134), jer bismo posle prvog typeof dobili reč number 
+što bi u sledećem typeof pokazalo string.
