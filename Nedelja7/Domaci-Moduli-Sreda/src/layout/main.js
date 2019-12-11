@@ -113,6 +113,13 @@ class Main{
     this.divMojePorukeContainer.appendChild(divMojePoruke);
 
 
+    let inputNoviAutor=new Input("Autor");
+    let htmlinputNoviAutor=inputNoviAutor.getNode();
+
+    let inputNoviNaslov=new Input("Autor");
+    let htmlinputNoviNaslov=inputNoviNaslov.getNode();
+
+
     }
 
     getNode(){
